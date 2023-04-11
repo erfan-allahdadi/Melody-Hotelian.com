@@ -41,10 +41,11 @@ MELODY_API.interceptors.response.use(
           MELODY_API.defaults.headers.common["authorization"] = acc;
           return MELODY_API(error.config);
         } else {
-          // window.location.href = "/";
+          window.location.href = "/";
         }
       }).catch((err) => {
-        // window.location.href = "/";
+        localStorage.clear()
+        window.location.href = "/";
         return Promise.reject(err);
       });
     }
